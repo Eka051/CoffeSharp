@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             topPanel = new Panel();
+            button1 = new Button();
             panelSB = new Panel();
             srcBox = new TextBox();
             logoPanel = new Panel();
@@ -74,6 +75,7 @@
             // topPanel
             // 
             topPanel.BackColor = Color.White;
+            topPanel.Controls.Add(button1);
             topPanel.Controls.Add(panelSB);
             topPanel.Controls.Add(logoPanel);
             topPanel.Dock = DockStyle.Top;
@@ -81,6 +83,19 @@
             topPanel.Name = "topPanel";
             topPanel.Size = new Size(1920, 110);
             topPanel.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.SaddleBrown;
+            button1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.Menu;
+            button1.Location = new Point(898, 34);
+            button1.Name = "button1";
+            button1.Size = new Size(238, 41);
+            button1.TabIndex = 3;
+            button1.Text = "Rekap Penjualan";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panelSB
             // 
@@ -96,10 +111,10 @@
             // 
             srcBox.BackColor = SystemColors.ControlLight;
             srcBox.BorderStyle = BorderStyle.None;
-            srcBox.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            srcBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             srcBox.Location = new Point(49, 15);
             srcBox.Name = "srcBox";
-            srcBox.Size = new Size(228, 20);
+            srcBox.Size = new Size(228, 19);
             srcBox.TabIndex = 2;
             // 
             // logoPanel
@@ -132,7 +147,7 @@
             button4.BackColor = Color.Red;
             button4.BackgroundImageLayout = ImageLayout.Zoom;
             button4.Cursor = Cursors.Hand;
-            button4.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
             button4.Image = Properties.Resources.logoutBtn;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
@@ -151,7 +166,7 @@
             btnTransaksi.BackColor = Color.Transparent;
             btnTransaksi.BackgroundImageLayout = ImageLayout.Zoom;
             btnTransaksi.Cursor = Cursors.Hand;
-            btnTransaksi.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransaksi.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTransaksi.ForeColor = Color.Black;
             btnTransaksi.Image = Properties.Resources.transaksiBlack;
             btnTransaksi.ImageAlign = ContentAlignment.MiddleLeft;
@@ -170,14 +185,14 @@
             btnPengelolaanProduk.BackColor = Color.Transparent;
             btnPengelolaanProduk.BackgroundImageLayout = ImageLayout.Zoom;
             btnPengelolaanProduk.Cursor = Cursors.Hand;
-            btnPengelolaanProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPengelolaanProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPengelolaanProduk.ForeColor = Color.Black;
             btnPengelolaanProduk.Image = Properties.Resources.kelolaProdukBlack;
             btnPengelolaanProduk.ImageAlign = ContentAlignment.MiddleLeft;
             btnPengelolaanProduk.Location = new Point(3, 134);
             btnPengelolaanProduk.Name = "btnPengelolaanProduk";
             btnPengelolaanProduk.Padding = new Padding(20, 0, 0, 0);
-            btnPengelolaanProduk.Size = new Size(258, 58);
+            btnPengelolaanProduk.Size = new Size(276, 58);
             btnPengelolaanProduk.TabIndex = 4;
             btnPengelolaanProduk.Text = "             Pengelolaan Produk";
             btnPengelolaanProduk.TextAlign = ContentAlignment.MiddleLeft;
@@ -190,7 +205,7 @@
             btnPengelolaanStok.BackColor = Color.Transparent;
             btnPengelolaanStok.BackgroundImageLayout = ImageLayout.Zoom;
             btnPengelolaanStok.Cursor = Cursors.Hand;
-            btnPengelolaanStok.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPengelolaanStok.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPengelolaanStok.ForeColor = Color.Black;
             btnPengelolaanStok.Image = Properties.Resources.kelolaStokBlack;
             btnPengelolaanStok.ImageAlign = ContentAlignment.MiddleLeft;
@@ -210,7 +225,7 @@
             btnDashboard.BackColor = Color.SaddleBrown;
             btnDashboard.BackgroundImageLayout = ImageLayout.Zoom;
             btnDashboard.Cursor = Cursors.Hand;
-            btnDashboard.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.White;
             btnDashboard.Image = Properties.Resources.dashboardWhite;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
@@ -222,14 +237,15 @@
             btnDashboard.Text = "             Dashboard";
             btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
             btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // lblDashboard
             // 
             lblDashboard.AutoSize = true;
-            lblDashboard.Font = new Font("SF Pro Display", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboard.Font = new Font("Microsoft Sans Serif", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDashboard.Location = new Point(396, 137);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(239, 51);
+            lblDashboard.Size = new Size(242, 51);
             lblDashboard.TabIndex = 2;
             lblDashboard.Text = "Dashboard";
             // 
@@ -249,10 +265,10 @@
             // 
             lblTotalProduk.AutoSize = true;
             lblTotalProduk.BackColor = Color.Transparent;
-            lblTotalProduk.Font = new Font("SF Pro Display", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalProduk.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalProduk.Location = new Point(130, 64);
             lblTotalProduk.Name = "lblTotalProduk";
-            lblTotalProduk.Size = new Size(30, 32);
+            lblTotalProduk.Size = new Size(30, 31);
             lblTotalProduk.TabIndex = 2;
             lblTotalProduk.Text = "2";
             // 
@@ -260,10 +276,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(130, 99);
             label2.Name = "label2";
-            label2.Size = new Size(45, 23);
+            label2.Size = new Size(45, 24);
             label2.TabIndex = 1;
             label2.Text = "Item";
             // 
@@ -271,10 +287,10 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(130, 35);
             label1.Name = "label1";
-            label1.Size = new Size(109, 23);
+            label1.Size = new Size(116, 24);
             label1.TabIndex = 0;
             label1.Text = "Total Produk";
             // 
@@ -294,10 +310,10 @@
             // 
             lblTotalPenjualan.AutoSize = true;
             lblTotalPenjualan.BackColor = Color.Transparent;
-            lblTotalPenjualan.Font = new Font("SF Pro Display", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalPenjualan.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalPenjualan.Location = new Point(139, 64);
             lblTotalPenjualan.Name = "lblTotalPenjualan";
-            lblTotalPenjualan.Size = new Size(32, 32);
+            lblTotalPenjualan.Size = new Size(30, 31);
             lblTotalPenjualan.TabIndex = 3;
             lblTotalPenjualan.Text = "0";
             // 
@@ -305,10 +321,10 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(139, 99);
             label4.Name = "label4";
-            label4.Size = new Size(101, 23);
+            label4.Size = new Size(108, 24);
             label4.TabIndex = 2;
             label4.Text = "Item Terjual";
             // 
@@ -316,10 +332,10 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(139, 35);
             label3.Name = "label3";
-            label3.Size = new Size(131, 23);
+            label3.Size = new Size(140, 24);
             label3.TabIndex = 1;
             label3.Text = "Total Penjualan";
             // 
@@ -339,10 +355,10 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(143, 96);
             label6.Name = "label6";
-            label6.Size = new Size(126, 23);
+            label6.Size = new Size(132, 24);
             label6.TabIndex = 5;
             label6.Text = "Dari Penjualan";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -351,10 +367,10 @@
             // 
             lblTotalPenghasilan.AutoSize = true;
             lblTotalPenghasilan.BackColor = Color.Transparent;
-            lblTotalPenghasilan.Font = new Font("SF Pro Display", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalPenghasilan.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalPenghasilan.Location = new Point(143, 64);
             lblTotalPenghasilan.Name = "lblTotalPenghasilan";
-            lblTotalPenghasilan.Size = new Size(76, 32);
+            lblTotalPenghasilan.Size = new Size(84, 31);
             lblTotalPenghasilan.TabIndex = 4;
             lblTotalPenghasilan.Text = "Rp. 0";
             // 
@@ -362,10 +378,10 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(143, 35);
             label5.Name = "label5";
-            label5.Size = new Size(150, 23);
+            label5.Size = new Size(160, 24);
             label5.TabIndex = 2;
             label5.Text = "Total Penghasilan";
             // 
@@ -385,11 +401,11 @@
             // 
             lblHrgProduk.AutoSize = true;
             lblHrgProduk.BackColor = Color.Transparent;
-            lblHrgProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHrgProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHrgProduk.ForeColor = Color.DarkOrange;
             lblHrgProduk.Location = new Point(40, 208);
             lblHrgProduk.Name = "lblHrgProduk";
-            lblHrgProduk.Size = new Size(106, 23);
+            lblHrgProduk.Size = new Size(109, 24);
             lblHrgProduk.TabIndex = 2;
             lblHrgProduk.Text = "Rp. 55.000";
             lblHrgProduk.TextAlign = ContentAlignment.MiddleCenter;
@@ -398,10 +414,10 @@
             // 
             lblNamaProduk.AutoSize = true;
             lblNamaProduk.BackColor = Color.Transparent;
-            lblNamaProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNamaProduk.Location = new Point(32, 181);
             lblNamaProduk.Name = "lblNamaProduk";
-            lblNamaProduk.Size = new Size(125, 23);
+            lblNamaProduk.Size = new Size(134, 24);
             lblNamaProduk.TabIndex = 1;
             lblNamaProduk.Text = "Kopi Robusta";
             // 
@@ -432,11 +448,11 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.DarkOrange;
             label7.Location = new Point(40, 208);
             label7.Name = "label7";
-            label7.Size = new Size(105, 23);
+            label7.Size = new Size(109, 24);
             label7.TabIndex = 2;
             label7.Text = "Rp. 75.000";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -445,10 +461,10 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(32, 181);
             label8.Name = "label8";
-            label8.Size = new Size(119, 23);
+            label8.Size = new Size(129, 24);
             label8.TabIndex = 1;
             label8.Text = "Kopi Arabica";
             // 
@@ -531,5 +547,6 @@
         private Label label7;
         private Label label8;
         private PictureBox pictureBox2;
+        private Button button1;
     }
 }

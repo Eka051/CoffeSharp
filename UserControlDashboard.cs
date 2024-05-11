@@ -1,9 +1,11 @@
-﻿using System;
+﻿using COFFE_SHARP.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +30,14 @@ namespace COFFE_SHARP
         {
             mainForm.ShowKelolaProduk();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mainForm.ShowKelolaRekap();
+        }
 
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            mainForm.ShowDashboard();
+        }
     }
 }
