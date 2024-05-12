@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             topPanel = new Panel();
-            button1 = new Button();
+            ButtonRekapPenjualan = new Button();
             panelSB = new Panel();
             srcBox = new TextBox();
             logoPanel = new Panel();
@@ -75,7 +75,7 @@
             // topPanel
             // 
             topPanel.BackColor = Color.White;
-            topPanel.Controls.Add(button1);
+            topPanel.Controls.Add(ButtonRekapPenjualan);
             topPanel.Controls.Add(panelSB);
             topPanel.Controls.Add(logoPanel);
             topPanel.Dock = DockStyle.Top;
@@ -84,18 +84,18 @@
             topPanel.Size = new Size(1920, 110);
             topPanel.TabIndex = 0;
             // 
-            // button1
+            // ButtonRekapPenjualan
             // 
-            button1.BackColor = Color.SaddleBrown;
-            button1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Menu;
-            button1.Location = new Point(898, 34);
-            button1.Name = "button1";
-            button1.Size = new Size(238, 41);
-            button1.TabIndex = 3;
-            button1.Text = "Rekap Penjualan";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            ButtonRekapPenjualan.BackColor = Color.SaddleBrown;
+            ButtonRekapPenjualan.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonRekapPenjualan.ForeColor = SystemColors.Menu;
+            ButtonRekapPenjualan.Location = new Point(898, 34);
+            ButtonRekapPenjualan.Name = "ButtonRekapPenjualan";
+            ButtonRekapPenjualan.Size = new Size(238, 41);
+            ButtonRekapPenjualan.TabIndex = 3;
+            ButtonRekapPenjualan.Text = "Rekap Penjualan";
+            ButtonRekapPenjualan.UseVisualStyleBackColor = false;
+            ButtonRekapPenjualan.Click += button1_Click;
             // 
             // panelSB
             // 
@@ -547,6 +547,6 @@
         private Label label7;
         private Label label8;
         private PictureBox pictureBox2;
-        private Button button1;
+        private Button ButtonRekapPenjualan;
     }
 }

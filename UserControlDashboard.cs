@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace COFFE_SHARP
 {
@@ -32,7 +33,25 @@ namespace COFFE_SHARP
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            Rekap rekap = new Rekap();
+            UCRekapPenjualan uCRekapPenjualan = new UCRekapPenjualan(mainForm);
+            PenjualanHariIniContext penjualanHariIniContext = new PenjualanHariIniContext();
+            PenjualanMingguIniContext penjualanMingguIniContext = new PenjualanMingguIniContext();
+            PenjualanBulanIni penjualanBulanIni = new PenjualanBulanIni();
+            rekap.Today = penjualanHariIniContext.GetTotalPembayaranHariIni();
+            rekap.Weekly = penjualanMingguIniContext.GetTotalPembayaranMingguIni();
+            rekap.Monthly = penjualanBulanIni.GetTotalPembayaranBulanIni();
+
             mainForm.ShowKelolaRekap();
+
+            // Mengatur LabelRekapHariIni
+            uCRekapPenjualan.LabelRekapHariIni.Text = rekap.Today.ToString();
+
+            // Mengatur LabelRekapMingguIni
+            uCRekapPenjualan.LabelRekapMingguIni.Text = rekap.Weekly.ToString();
+
+            // Mengatur LabelRekapBulanIni
+            uCRekapPenjualan.LabelRekapBulanIni.Text = rekap.Monthly.ToString();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)

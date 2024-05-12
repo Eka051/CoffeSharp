@@ -43,21 +43,28 @@ namespace COFFE_SHARP
             mainForm.ShowDashboard();
         }
 
+        Rekap rekap = new Rekap();
+
         private void button2_Click(object sender, EventArgs e)
         {
             DateTime tanggalAwal = dateTimePicker1.Value.Date;
             DateTime tanggalAkhir = dateTimePicker2.Value.Date;
 
-            Rekap rekap = new Rekap();
             PenjualanDipilih penjualanDipilih = new PenjualanDipilih();
             rekap.Dipilih = penjualanDipilih.GetTotalPembayaranTanggalDipilih(tanggalAwal, tanggalAkhir);
-            label10.Text = rekap.Dipilih.ToString();
-
+            if (rekap.Dipilih == 0)
+            {
+                LabelPenjualanBerdasarkanPeriodeDipilih.Text = "0";
+                MessageBox.Show("Tidak ada Penjualan Yang Terjadi Pada Tanggal Tersebut");
+            }
+            else
+            {
+                LabelPenjualanBerdasarkanPeriodeDipilih.Text = rekap.Dipilih.ToString();
+            }
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
-
         }
 
         private void DisplaySalesData()
@@ -65,7 +72,6 @@ namespace COFFE_SHARP
         }
         public void label15_Click(object sender, EventArgs e)
         {
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -74,23 +80,47 @@ namespace COFFE_SHARP
 
         private void button3_Click(object sender, EventArgs e)
         {
-
         }
 
         public void button3_Click_1(object sender, EventArgs e)
         {
-            Rekap rekap = new Rekap();
             PenjualanHariIniContext context = new PenjualanHariIniContext();
             rekap.Today = context.GetTotalPembayaranHariIni();
-            label15.Text = rekap.Today.ToString();
+            PenjualanMingguIniContext penjualanMingguIniContext = new PenjualanMingguIniContext();
+            rekap.Weekly = penjualanMingguIniContext.GetTotalPembayaranMingguIni();
+            PenjualanBulanIni penjualanBulanIni = new PenjualanBulanIni();
+            rekap.Monthly = penjualanBulanIni.GetTotalPembayaranBulanIni();
+            if (rekap.Today == 0)
+            {
+                label3.Text = "Tidak Ada Penjualan Hari Ini";
+            }
+            else
+            {
+                LabelRekapHariIni.Text = rekap.Today.ToString();
+            }
+
+            LabelRekapMingguIni.Text = rekap.Weekly.ToString();
+            if (rekap.Weekly == 0)
+            {
+                label1.Text = "Tidak ada Penjualan Minggu Ini";
+            }
+            else
+            {
+                LabelRekapMingguIni.Text = rekap.Weekly.ToString();
+            }
+
+            if (rekap.Monthly == 0)
+            {
+                label4.Text = "Tidak ada Penjualan Bulan Ini";
+            }
+            else
+            {
+                LabelRekapBulanIni.Text = rekap.Monthly.ToString();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Rekap rekap = new Rekap();
-            PenjualanMingguIniContext context = new PenjualanMingguIniContext();
-            rekap.Weekly = context.GetTotalPembayaranMingguIni();
-            label17.Text = rekap.Weekly.ToString();
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -100,10 +130,6 @@ namespace COFFE_SHARP
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Rekap rekap = new Rekap();
-            PenjualanBulanIni context = new PenjualanBulanIni();
-            rekap.Weekly = context.GetTotalPembayaranBulanIni();
-            label16.Text = rekap.Weekly.ToString();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -126,6 +152,20 @@ namespace COFFE_SHARP
 
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
+        }
+
+        private void lblNamaProduk_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void LabelPenjualanBerdasarkanPeriodeDipilih_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,11 +21,16 @@ namespace COFFE_SHARP.Models
                 conn.Open();
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                 {
-                    rekap.Today = Convert.ToDouble(cmd.ExecuteScalar());
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        rekap.Today = Convert.ToDouble(result);
+                    }
                 }
             }
             return rekap.Today;
         }
     }
 }
+
 
