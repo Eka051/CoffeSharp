@@ -359,6 +359,7 @@
             topPanel.Name = "topPanel";
             topPanel.Size = new Size(1920, 110);
             topPanel.TabIndex = 8;
+            topPanel.Paint += topPanel_Paint;
             // 
             // UCPengelolaanStok
             // 

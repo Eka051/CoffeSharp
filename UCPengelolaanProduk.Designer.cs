@@ -248,7 +248,7 @@
             button2.BackColor = Color.SaddleBrown;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Image = Properties.Resources.kelolaProdukWhite;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
