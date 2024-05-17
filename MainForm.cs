@@ -30,7 +30,7 @@ namespace COFFE_SHARP
 
             HideAllUserControl();
             ShowSplashScreen();
-           
+
 
             timer = new System.Windows.Forms.Timer();
             timer.Interval = 3000;
@@ -38,7 +38,7 @@ namespace COFFE_SHARP
             timer.Start();
         }
 
-        
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
@@ -87,6 +87,11 @@ namespace COFFE_SHARP
         {
             HideAllUserControl();
             transaksi.Visible = true;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
