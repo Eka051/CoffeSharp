@@ -5,5 +5,5 @@ Welcome to **Coffee Sharp**, a desktop cashier application designed for seamless
 ## Information
 
 **Font Used:** SF Pro Display  
-**Display Setting:** 100%
-**Nuget Package:** Npgsql
+**Display Setting:** 100%  
+**NuGet Package:** Npgsql
