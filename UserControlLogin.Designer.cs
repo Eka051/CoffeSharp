@@ -80,7 +80,7 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(1344, 241);
+            panel1.Location = new Point(891, 169);
             panel1.Name = "panel1";
             panel1.Size = new Size(438, 416);
             panel1.TabIndex = 9;
@@ -170,7 +170,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("SF Pro Display", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(1424, 141);
+            label3.Location = new Point(956, 31);
             label3.Name = "label3";
             label3.Size = new Size(305, 84);
             label3.TabIndex = 9;

@@ -101,6 +101,7 @@
             srcBox.Name = "srcBox";
             srcBox.Size = new Size(228, 20);
             srcBox.TabIndex = 2;
+            srcBox.TextChanged += srcBox_TextChanged;
             // 
             // logoPanel
             // 

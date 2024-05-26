@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COFFE_SHARP.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,5 +44,37 @@ namespace COFFE_SHARP
             }
         }
 
+        private void srcBox_TextChanged(object sender, EventArgs e)
+        {
+            /*CariProdukContext cariProdukContext = new CariProdukContext();*/
+            /* CariProduk cariProduk = cariProdukContext.GetProduk(nama_produk);*/
+            //lblNamaProduk.Text = cariProduk.nama_produk;
+            //lblHrgProduk.Text = cariProduk.harga.ToString();
+            TextBox srcBox = sender as TextBox;
+            string nama_produk = srcBox.Text;
+
+            if (!string.IsNullOrEmpty(nama_produk))
+            {
+                CariProdukContext cariProdukContext = new CariProdukContext();
+                CariProduk cariProduk = cariProdukContext.GetProduk(nama_produk);
+
+                if (cariProduk != null)
+                {
+                    lblNamaProduk.Text = cariProduk.nama_produk;
+                    lblHrgProduk.Text = cariProduk.harga.ToString();
+                }
+                else
+                {
+                    lblNamaProduk.Text = "Produk tidak ditemukan";
+                    lblHrgProduk.Text = string.Empty;
+                }
+            }
+            else
+            {
+                lblNamaProduk.Text = string.Empty;
+                lblHrgProduk.Text = string.Empty;
+            }
+        }
     }
 }
+        
