@@ -9,6 +9,8 @@ CREATE TABLE Produk (
 	deskripsi_produk varchar(50) NOT NULL
 )
 
+insert into Produk values(1, 'Kopi Colombia', 55000, 2, 0, 0, '2025-1-23', 'kopi pilihan')
+
 CREATE TABLE Jenis_produk (
 	id_jenis_produk int PRIMARY KEY,
 	nama_jenis_produk varchar NOT NULL

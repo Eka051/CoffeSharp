@@ -34,7 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1904, 1041);
+            ClientSize = new Size(609, 271);
             Name = "MainForm";
             Text = "Coffe Sharp";
             ResumeLayout(false);

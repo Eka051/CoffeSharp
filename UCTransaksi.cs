@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COFFE_SHARP.Models;
+using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace COFFE_SHARP
 {
@@ -27,6 +30,7 @@ namespace COFFE_SHARP
                 mainForm.ShowLogin();
             }
         }
+
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             mainForm.ShowDashboard();
@@ -42,5 +46,28 @@ namespace COFFE_SHARP
             mainForm.ShowKelolaProduk();
         }
 
+        private void addProdukTrs_Click(object sender, EventArgs e)
+        {
+            TransaksiContext transaksiContext = new TransaksiContext();
+            int id = 1;
+            Transaksi transaksi = transaksiContext.GetListTransaksi(id);
+            NamaProduk.Text = transaksi.nama_produk;
+            //labelTotalProduk.Text = transaksi.jumlah.ToString();
+        }
+
+        private void addTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTotalProduk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UCTransaksi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
