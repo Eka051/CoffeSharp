@@ -12,7 +12,7 @@ namespace COFFE_SHARP.Models
         private readonly string connStr;
         public LoginAdminContext()
         {
-            connStr = "Server=localhost;Port=5432;Username=postgres;Password=dianeka@05;Database=CoffeSharp;CommandTimeout=10";
+            connStr = "Server=localhost;Port=5432;Username=postgres;Password=arifa01;Database=coffesharp;CommandTimeout=10";
         }
         public LoginAdmin Validate(string username, string password)
         {

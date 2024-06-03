@@ -42,5 +42,10 @@ namespace COFFE_SHARP
         {
             mainForm.ShowTransaksi();
         }
+
+        private void dspProduk_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

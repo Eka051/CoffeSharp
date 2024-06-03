@@ -130,8 +130,17 @@
   <data name="kelolaStokWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kelolaStokWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addTransaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addTransaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_84581413-5587-4dd8-88bb-f8465f19d4cf 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_84581413-5587-4dd8-88bb-f8465f19d4cf 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Total Produk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Total Produk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Desain tanpa judul (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desain tanpa judul (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaksiBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transaksiBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +148,11 @@
   <data name="Total Penjualan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Total Penjualan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sign Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sign Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Total Penghasilan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Total Penghasilan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaksiWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transaksiWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +160,26 @@
   <data name="dspProduk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dspProduk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Desain tanpa judul (12)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desain tanpa judul (12)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minusIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minusIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="historyIconBlck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\historyIconBlck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Desain tanpa judul (12)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Desain tanpa judul (12)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trsPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trsPanel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kelolaStokBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kelolaStokBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_84581413-5587-4dd8-88bb-f8465f19d4cf 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_84581413-5587-4dd8-88bb-f8465f19d4cf 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DeleteButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DeleteButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +202,8 @@
   <data name="kelolaProdukWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kelolaProdukWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minusIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minusIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Total Penghasilan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Total Penghasilan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coffe beans" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffe beans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,16 +211,13 @@
   <data name="kelolaProdukBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kelolaProdukBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adminLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adminLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addTransaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addTransaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_84581413-5587-4dd8-88bb-f8465f19d4cf 12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_84581413-5587-4dd8-88bb-f8465f19d4cf 12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

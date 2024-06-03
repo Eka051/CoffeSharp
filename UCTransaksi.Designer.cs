@@ -428,6 +428,7 @@
             btnLanjutTransaksi.TabIndex = 20;
             btnLanjutTransaksi.Text = "Lanjutkan Transaksi";
             btnLanjutTransaksi.UseVisualStyleBackColor = false;
+            btnLanjutTransaksi.Click += btnLanjutTransaksi_Click;
             // 
             // label2
             // 

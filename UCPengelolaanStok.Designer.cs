@@ -137,6 +137,7 @@
             label8.Size = new Size(119, 23);
             label8.TabIndex = 1;
             label8.Text = "Kopi Arabica";
+            label8.Click += label8_Click;
             // 
             // lblNamaProduk
             // 

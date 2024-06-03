@@ -42,5 +42,10 @@ namespace COFFE_SHARP
         {
             mainForm.ShowTransaksi();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,5 +42,10 @@ namespace COFFE_SHARP
             mainForm.ShowKelolaProduk();
         }
 
+        private void btnLanjutTransaksi_Click(object sender, EventArgs e)
+        {
+            metode Metode = new metode();
+            Metode.ShowDialog();
+        }
     }
 }

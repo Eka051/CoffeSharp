@@ -63,6 +63,36 @@ namespace COFFE_SHARP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _84581413_5587_4dd8_88bb_f8465f19d4cf_1 {
+            get {
+                object obj = ResourceManager.GetObject("_84581413-5587-4dd8-88bb-f8465f19d4cf 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _84581413_5587_4dd8_88bb_f8465f19d4cf_11 {
+            get {
+                object obj = ResourceManager.GetObject("_84581413-5587-4dd8-88bb-f8465f19d4cf 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _84581413_5587_4dd8_88bb_f8465f19d4cf_12 {
+            get {
+                object obj = ResourceManager.GetObject("_84581413-5587-4dd8-88bb-f8465f19d4cf 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addBtn {
             get {
                 object obj = ResourceManager.GetObject("addBtn", resourceCulture);
@@ -136,6 +166,36 @@ namespace COFFE_SHARP.Properties {
         internal static System.Drawing.Bitmap DeleteButton {
             get {
                 object obj = ResourceManager.GetObject("DeleteButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Desain_tanpa_judul__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Desain tanpa judul (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Desain_tanpa_judul__12_1 {
+            get {
+                object obj = ResourceManager.GetObject("Desain tanpa judul (12)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Desain_tanpa_judul__12_2 {
+            get {
+                object obj = ResourceManager.GetObject("Desain tanpa judul (12)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

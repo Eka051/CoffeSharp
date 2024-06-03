@@ -178,6 +178,7 @@
             dspProduk.Name = "dspProduk";
             dspProduk.Size = new Size(190, 286);
             dspProduk.TabIndex = 14;
+            dspProduk.Paint += dspProduk_Paint;
             // 
             // button6
             // 
