@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
+using Npgsql;
 
 namespace COFFE_SHARP
 {
     public partial class UserControlDashboard : UserControl
     {
-        MainForm mainForm;
-        UserControlLogin login;
-        private System.Windows.Forms.Timer timer;
+        private MainForm mainForm;
+        private Timer timer;
 
         public UserControlDashboard(MainForm mainForm)
         {
@@ -63,31 +63,47 @@ namespace COFFE_SHARP
 
         private void UpdateLabels()
         {
-            string connectionString = "Server=localhost;Database=CoffeSharp;Trusted_Connection=True;";
+            string connString = "Host=localhost;Port=5432;Username=postgres;Password=123;Database=CoffeSharp;";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (NpgsqlConnection connection = new NpgsqlConnection(connString))
             {
                 connection.Open();
 
                 // Mengambil jumlah produk
-                string queryTotalProduk = "SELECT COUNT(*) AS jumlah_produk FROM Produk";
-                using (SqlCommand command = new SqlCommand(queryTotalProduk, connection))
+                string queryTotalProduk = "SELECT SUM(stok) AS jumlah_produk FROM produk";
+                using (NpgsqlCommand command = new NpgsqlCommand(queryTotalProduk, connection))
                 {
-                    int totalProduk = (int)command.ExecuteScalar();
-                    lblTotalProduk.Text = totalProduk.ToString();
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        int totalProduk = Convert.ToInt32(result);
+                        lblTotalProduk.Text = totalProduk.ToString();
+                    }
+                    else
+                    {
+                        lblTotalProduk.Text = "0";
+                    }
                 }
 
                 // Mengambil total penjualan
-                string queryTotalPenjualan = "SELECT COUNT(*) AS total_penjualan FROM Transaksi";
-                using (SqlCommand command = new SqlCommand(queryTotalPenjualan, connection))
+                string queryTotalPenjualan = "SELECT SUM(jumlah_produk) AS total_penjualan FROM detail_transaksi";
+                using (NpgsqlCommand command = new NpgsqlCommand(queryTotalPenjualan, connection))
                 {
-                    int totalPenjualan = (int)command.ExecuteScalar();
-                    lblTotalPenjualan.Text = totalPenjualan.ToString();
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        int totalPenjualan = Convert.ToInt32(result);
+                        lblTotalPenjualan.Text = totalPenjualan.ToString();
+                    }
+                    else
+                    {
+                        lblTotalPenjualan.Text = "0";
+                    }
                 }
 
                 // Mengambil total penghasilan
-                string queryTotalPenghasilan = "SELECT SUM(total_pembayaran_transaksi) - SUM(jumlah_produk * harga) AS total_penghasilan FROM Transaksi JOIN Produk ON Transaksi.id_produk = Produk.id_produk";
-                using (SqlCommand command = new SqlCommand(queryTotalPenghasilan, connection))
+                string queryTotalPenghasilan = "SELECT SUM(transaksi.total_harga) - SUM(produk.harga * detail_transaksi.jumlah_produk) FROM transaksi JOIN detail_transaksi ON transaksi.id_transaksi = detail_Transaksi.id_transaksi JOIN produk ON detail_transaksi.id_produk = produk.id_produk";
+                using (NpgsqlCommand command = new NpgsqlCommand(queryTotalPenghasilan, connection))
                 {
                     object result = command.ExecuteScalar();
                     if (result != DBNull.Value)
