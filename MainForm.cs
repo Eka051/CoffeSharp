@@ -42,7 +42,7 @@ namespace COFFE_SHARP
         private void Timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
-            ShowLogin();
+            ShowDashboard();
         }
 
         public void HideAllUserControl()

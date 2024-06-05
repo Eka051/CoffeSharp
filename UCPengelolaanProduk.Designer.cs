@@ -62,11 +62,11 @@
             // 
             labelHrgProduk.AutoSize = true;
             labelHrgProduk.BackColor = Color.Transparent;
-            labelHrgProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelHrgProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelHrgProduk.ForeColor = Color.DarkOrange;
             labelHrgProduk.Location = new Point(40, 191);
             labelHrgProduk.Name = "labelHrgProduk";
-            labelHrgProduk.Size = new Size(105, 23);
+            labelHrgProduk.Size = new Size(109, 24);
             labelHrgProduk.TabIndex = 2;
             labelHrgProduk.Text = "Rp. 75.000";
             labelHrgProduk.TextAlign = ContentAlignment.MiddleCenter;
@@ -100,7 +100,7 @@
             // 
             button7.BackgroundImage = Properties.Resources.DeleteButton;
             button7.BackgroundImageLayout = ImageLayout.Center;
-            button7.Font = new Font("SF Pro Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.Location = new Point(127, 223);
             button7.Name = "button7";
             button7.Size = new Size(33, 36);
@@ -109,7 +109,7 @@
             // 
             // button8
             // 
-            button8.Font = new Font("SF Pro Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button8.Image = Properties.Resources.editIcon;
             button8.ImageAlign = ContentAlignment.BottomLeft;
             button8.Location = new Point(32, 223);
@@ -123,10 +123,10 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(32, 164);
             label8.Name = "label8";
-            label8.Size = new Size(119, 23);
+            label8.Size = new Size(129, 24);
             label8.TabIndex = 1;
             label8.Text = "Kopi Arabica";
             // 
@@ -134,11 +134,11 @@
             // 
             lblHrgProduk.AutoSize = true;
             lblHrgProduk.BackColor = Color.Transparent;
-            lblHrgProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHrgProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHrgProduk.ForeColor = Color.DarkOrange;
             lblHrgProduk.Location = new Point(40, 191);
             lblHrgProduk.Name = "lblHrgProduk";
-            lblHrgProduk.Size = new Size(106, 23);
+            lblHrgProduk.Size = new Size(109, 24);
             lblHrgProduk.TabIndex = 2;
             lblHrgProduk.Text = "Rp. 55.000";
             lblHrgProduk.TextAlign = ContentAlignment.MiddleCenter;
@@ -147,10 +147,10 @@
             // 
             lblNamaProduk.AutoSize = true;
             lblNamaProduk.BackColor = Color.Transparent;
-            lblNamaProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNamaProduk.Location = new Point(32, 164);
             lblNamaProduk.Name = "lblNamaProduk";
-            lblNamaProduk.Size = new Size(125, 23);
+            lblNamaProduk.Size = new Size(134, 24);
             lblNamaProduk.TabIndex = 1;
             lblNamaProduk.Text = "Kopi Robusta";
             // 
@@ -183,16 +183,17 @@
             // 
             button6.BackgroundImage = Properties.Resources.DeleteButton;
             button6.BackgroundImageLayout = ImageLayout.Center;
-            button6.Font = new Font("SF Pro Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button6.Location = new Point(127, 223);
             button6.Name = "button6";
             button6.Size = new Size(33, 36);
             button6.TabIndex = 4;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
-            button5.Font = new Font("SF Pro Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.Image = Properties.Resources.editIcon;
             button5.ImageAlign = ContentAlignment.BottomLeft;
             button5.Location = new Point(32, 223);
@@ -208,7 +209,7 @@
             btnLogout.BackColor = Color.Red;
             btnLogout.BackgroundImageLayout = ImageLayout.Zoom;
             btnLogout.Cursor = Cursors.Hand;
-            btnLogout.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
             btnLogout.Image = Properties.Resources.logoutBtn;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
@@ -228,7 +229,7 @@
             btnTransaksi.BackColor = Color.Transparent;
             btnTransaksi.BackgroundImageLayout = ImageLayout.Zoom;
             btnTransaksi.Cursor = Cursors.Hand;
-            btnTransaksi.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransaksi.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTransaksi.ForeColor = Color.Black;
             btnTransaksi.Image = Properties.Resources.transaksiBlack;
             btnTransaksi.ImageAlign = ContentAlignment.MiddleLeft;
@@ -248,14 +249,14 @@
             button2.BackColor = Color.SaddleBrown;
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Image = Properties.Resources.kelolaProdukWhite;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(3, 134);
             button2.Name = "button2";
             button2.Padding = new Padding(20, 0, 0, 0);
-            button2.Size = new Size(258, 58);
+            button2.Size = new Size(276, 58);
             button2.TabIndex = 4;
             button2.Text = "             Pengelolaan Produk";
             button2.TextAlign = ContentAlignment.MiddleLeft;
@@ -267,7 +268,7 @@
             btnPengelolaanStok.BackColor = Color.Transparent;
             btnPengelolaanStok.BackgroundImageLayout = ImageLayout.Zoom;
             btnPengelolaanStok.Cursor = Cursors.Hand;
-            btnPengelolaanStok.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPengelolaanStok.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPengelolaanStok.ForeColor = Color.Black;
             btnPengelolaanStok.Image = Properties.Resources.kelolaStokBlack;
             btnPengelolaanStok.ImageAlign = ContentAlignment.MiddleLeft;
@@ -287,7 +288,7 @@
             btnDashboard.BackColor = Color.Transparent;
             btnDashboard.BackgroundImageLayout = ImageLayout.Zoom;
             btnDashboard.Cursor = Cursors.Hand;
-            btnDashboard.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.Image = Properties.Resources.dashboardBlack;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
@@ -338,10 +339,10 @@
             // lblDashboard
             // 
             lblDashboard.AutoSize = true;
-            lblDashboard.Font = new Font("SF Pro Display", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboard.Font = new Font("Microsoft Sans Serif", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDashboard.Location = new Point(396, 137);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(415, 51);
+            lblDashboard.Size = new Size(429, 51);
             lblDashboard.TabIndex = 10;
             lblDashboard.Text = "Pengelolaan Produk";
             // 
@@ -351,14 +352,14 @@
             button9.BackColor = Color.SaddleBrown;
             button9.BackgroundImageLayout = ImageLayout.Zoom;
             button9.Cursor = Cursors.Hand;
-            button9.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button9.ForeColor = Color.White;
             button9.Image = Properties.Resources.addBtn;
             button9.ImageAlign = ContentAlignment.MiddleLeft;
             button9.Location = new Point(1579, 137);
             button9.Name = "button9";
             button9.Padding = new Padding(20, 0, 0, 0);
-            button9.Size = new Size(233, 58);
+            button9.Size = new Size(240, 58);
             button9.TabIndex = 16;
             button9.Text = "             Tambah Produk";
             button9.TextAlign = ContentAlignment.MiddleLeft;

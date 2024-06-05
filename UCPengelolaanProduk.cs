@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COFFE_SHARP.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,20 @@ namespace COFFE_SHARP
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
             mainForm.ShowTransaksi();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Button btnProduct = sender as Button;
+            int productId = 1;
+
+            var confirmResult = MessageBox.Show("Yakin menghapus stok produk?", "Konfirmasi Pengurangan Stok", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                hapusProdukContext hapus = new hapusProdukContext();
+                hapus.HapusProduk(productId);
+            }
         }
     }
 }
