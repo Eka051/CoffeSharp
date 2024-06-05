@@ -12,12 +12,12 @@ namespace COFFE_SHARP.Models
         private readonly string connStr;
         public LoginAdminContext()
         {
-            connStr = "Server=localhost;Port=5432;Username=postgres;Password=dianeka@05;Database=CoffeSharp;CommandTimeout=10";
+            connStr = "Server=localhost;Port=5432;Username=postgres;Password=123;Database=CoffeSharp;CommandTimeout=10";
         }
         public LoginAdmin Validate(string username, string password)
         {
             LoginAdmin loginAdmin = null;
-            string query = "SELECT * FROM admin_ WHERE username_admin = @username AND password_admin = @password";
+            string query = "SELECT * FROM admin WHERE username_admin = @username AND password_admin = @password";
             using (NpgsqlConnection conn = new NpgsqlConnection(connStr))
             {
                 conn.Open();

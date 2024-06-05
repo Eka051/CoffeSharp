@@ -32,8 +32,8 @@
             panel4 = new Panel();
             label3 = new Label();
             label4 = new Label();
-            button7 = new Button();
-            button8 = new Button();
+            tambah_arabica = new Button();
+            kurang_arabica = new Button();
             label8 = new Label();
             lblNamaProduk = new Label();
             pictureBox1 = new PictureBox();
@@ -76,8 +76,8 @@
             panel4.BackgroundImageLayout = ImageLayout.Zoom;
             panel4.Controls.Add(label3);
             panel4.Controls.Add(label4);
-            panel4.Controls.Add(button7);
-            panel4.Controls.Add(button8);
+            panel4.Controls.Add(tambah_arabica);
+            panel4.Controls.Add(kurang_arabica);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(pictureBox2);
             panel4.Location = new Point(628, 225);
@@ -89,10 +89,10 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(78, 237);
             label3.Name = "label3";
-            label3.Size = new Size(39, 23);
+            label3.Size = new Size(40, 24);
             label3.TabIndex = 9;
             label3.Text = "pcs";
             // 
@@ -100,41 +100,43 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("SF Pro Display", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(84, 208);
             label4.Name = "label4";
-            label4.Size = new Size(29, 29);
+            label4.Size = new Size(27, 29);
             label4.TabIndex = 8;
             label4.Text = "0";
             // 
-            // button7
+            // tambah_arabica
             // 
-            button7.BackgroundImage = Properties.Resources.plusIcon;
-            button7.BackgroundImageLayout = ImageLayout.Center;
-            button7.Location = new Point(130, 208);
-            button7.Name = "button7";
-            button7.Size = new Size(31, 29);
-            button7.TabIndex = 7;
-            button7.UseVisualStyleBackColor = true;
+            tambah_arabica.BackgroundImage = Properties.Resources.plusIcon;
+            tambah_arabica.BackgroundImageLayout = ImageLayout.Center;
+            tambah_arabica.Location = new Point(130, 208);
+            tambah_arabica.Name = "tambah_arabica";
+            tambah_arabica.Size = new Size(31, 29);
+            tambah_arabica.TabIndex = 7;
+            tambah_arabica.UseVisualStyleBackColor = true;
+            tambah_arabica.Click += tambah_arabica_Click;
             // 
-            // button8
+            // kurang_arabica
             // 
-            button8.BackgroundImage = Properties.Resources.minusIcon;
-            button8.BackgroundImageLayout = ImageLayout.Center;
-            button8.Location = new Point(33, 208);
-            button8.Name = "button8";
-            button8.Size = new Size(31, 29);
-            button8.TabIndex = 6;
-            button8.UseVisualStyleBackColor = true;
+            kurang_arabica.BackgroundImage = Properties.Resources.minusIcon;
+            kurang_arabica.BackgroundImageLayout = ImageLayout.Center;
+            kurang_arabica.Location = new Point(33, 208);
+            kurang_arabica.Name = "kurang_arabica";
+            kurang_arabica.Size = new Size(31, 29);
+            kurang_arabica.TabIndex = 6;
+            kurang_arabica.UseVisualStyleBackColor = true;
+            kurang_arabica.Click += kurang_arabica_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(32, 169);
             label8.Name = "label8";
-            label8.Size = new Size(119, 23);
+            label8.Size = new Size(129, 24);
             label8.TabIndex = 1;
             label8.Text = "Kopi Arabica";
             // 
@@ -142,10 +144,10 @@
             // 
             lblNamaProduk.AutoSize = true;
             lblNamaProduk.BackColor = Color.Transparent;
-            lblNamaProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNamaProduk.Location = new Point(32, 169);
             lblNamaProduk.Name = "lblNamaProduk";
-            lblNamaProduk.Size = new Size(125, 23);
+            lblNamaProduk.Size = new Size(134, 24);
             lblNamaProduk.TabIndex = 1;
             lblNamaProduk.Text = "Kopi Robusta";
             // 
@@ -179,10 +181,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(77, 237);
             label2.Name = "label2";
-            label2.Size = new Size(39, 23);
+            label2.Size = new Size(40, 24);
             label2.TabIndex = 5;
             label2.Text = "pcs";
             // 
@@ -190,10 +192,10 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("SF Pro Display", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(83, 208);
             label1.Name = "label1";
-            label1.Size = new Size(29, 29);
+            label1.Size = new Size(27, 29);
             label1.TabIndex = 4;
             label1.Text = "0";
             // 
@@ -206,6 +208,7 @@
             button6.Size = new Size(31, 29);
             button6.TabIndex = 3;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -216,14 +219,15 @@
             button5.Size = new Size(31, 29);
             button5.TabIndex = 2;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // lblDashboard
             // 
             lblDashboard.AutoSize = true;
-            lblDashboard.Font = new Font("SF Pro Display", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboard.Font = new Font("Microsoft Sans Serif", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDashboard.Location = new Point(396, 137);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(364, 51);
+            lblDashboard.Size = new Size(377, 51);
             lblDashboard.TabIndex = 10;
             lblDashboard.Text = "Pengelolaan Stok";
             // 
@@ -233,7 +237,7 @@
             btnLogout.BackColor = Color.Red;
             btnLogout.BackgroundImageLayout = ImageLayout.Zoom;
             btnLogout.Cursor = Cursors.Hand;
-            btnLogout.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
             btnLogout.Image = Properties.Resources.logoutBtn;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
@@ -253,7 +257,7 @@
             btnTransaksi.BackColor = Color.Transparent;
             btnTransaksi.BackgroundImageLayout = ImageLayout.Zoom;
             btnTransaksi.Cursor = Cursors.Hand;
-            btnTransaksi.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransaksi.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTransaksi.ForeColor = Color.Black;
             btnTransaksi.Image = Properties.Resources.transaksiBlack;
             btnTransaksi.ImageAlign = ContentAlignment.MiddleLeft;
@@ -273,14 +277,14 @@
             button1.BackColor = Color.SaddleBrown;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Image = Properties.Resources.kelolaStokWhite;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(3, 70);
             button1.Name = "button1";
             button1.Padding = new Padding(20, 0, 0, 0);
-            button1.Size = new Size(258, 58);
+            button1.Size = new Size(311, 58);
             button1.TabIndex = 3;
             button1.Text = "             Pengelolaan Stok";
             button1.TextAlign = ContentAlignment.MiddleLeft;
@@ -297,7 +301,7 @@
             leftPanel.Dock = DockStyle.Left;
             leftPanel.Location = new Point(0, 110);
             leftPanel.Name = "leftPanel";
-            leftPanel.Size = new Size(264, 970);
+            leftPanel.Size = new Size(264, 700);
             leftPanel.TabIndex = 9;
             // 
             // btnDashboard
@@ -306,7 +310,7 @@
             btnDashboard.BackColor = Color.Transparent;
             btnDashboard.BackgroundImageLayout = ImageLayout.Zoom;
             btnDashboard.Cursor = Cursors.Hand;
-            btnDashboard.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.Image = Properties.Resources.dashboardBlack;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
@@ -326,14 +330,14 @@
             btnPengelolaanProduk.BackColor = Color.Transparent;
             btnPengelolaanProduk.BackgroundImageLayout = ImageLayout.Zoom;
             btnPengelolaanProduk.Cursor = Cursors.Hand;
-            btnPengelolaanProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPengelolaanProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPengelolaanProduk.ForeColor = Color.Black;
             btnPengelolaanProduk.Image = Properties.Resources.kelolaProdukBlack;
             btnPengelolaanProduk.ImageAlign = ContentAlignment.MiddleLeft;
             btnPengelolaanProduk.Location = new Point(3, 134);
             btnPengelolaanProduk.Name = "btnPengelolaanProduk";
             btnPengelolaanProduk.Padding = new Padding(20, 0, 0, 0);
-            btnPengelolaanProduk.Size = new Size(258, 58);
+            btnPengelolaanProduk.Size = new Size(340, 58);
             btnPengelolaanProduk.TabIndex = 7;
             btnPengelolaanProduk.Text = "             Pengelolaan Produk";
             btnPengelolaanProduk.TextAlign = ContentAlignment.MiddleLeft;
@@ -357,7 +361,7 @@
             topPanel.Dock = DockStyle.Top;
             topPanel.Location = new Point(0, 0);
             topPanel.Name = "topPanel";
-            topPanel.Size = new Size(1920, 110);
+            topPanel.Size = new Size(1680, 110);
             topPanel.TabIndex = 8;
             // 
             // UCPengelolaanStok
@@ -370,7 +374,7 @@
             Controls.Add(leftPanel);
             Controls.Add(topPanel);
             Name = "UCPengelolaanStok";
-            Size = new Size(1920, 1080);
+            Size = new Size(1680, 810);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -403,8 +407,8 @@
         private Panel topPanel;
         private Label label3;
         private Label label4;
-        private Button button7;
-        private Button button8;
+        private Button tambah_arabica;
+        private Button kurang_arabica;
         private Label label2;
         private Label label1;
         private Button btnPengelolaanProduk;
