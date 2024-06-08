@@ -60,6 +60,15 @@
             HargaProduk = new Label();
             NamaProduk = new Label();
             pictureBox3 = new PictureBox();
+            npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
+            dataGridView1 = new DataGridView();
+            ColumnNo = new DataGridViewTextBoxColumn();
+            ColumnTanggal = new DataGridViewTextBoxColumn();
+            ColumnIDProduk = new DataGridViewTextBoxColumn();
+            ColumnNamaProduk = new DataGridViewTextBoxColumn();
+            ColumnJumlah = new DataGridViewTextBoxColumn();
+            ColumnHarga = new DataGridViewTextBoxColumn();
+            ColumnTotalHarga = new DataGridViewTextBoxColumn();
             topPanel.SuspendLayout();
             leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -69,6 +78,7 @@
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // topPanel
@@ -84,10 +94,10 @@
             // lblDashboard
             // 
             lblDashboard.AutoSize = true;
-            lblDashboard.Font = new Font("SF Pro Display", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboard.Font = new Font("Microsoft Sans Serif", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDashboard.Location = new Point(132, 27);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(210, 51);
+            lblDashboard.Size = new Size(219, 51);
             lblDashboard.TabIndex = 18;
             lblDashboard.Text = "Transaksi\r\n";
             // 
@@ -107,7 +117,7 @@
             btnDashboard.BackColor = Color.Transparent;
             btnDashboard.BackgroundImageLayout = ImageLayout.Zoom;
             btnDashboard.Cursor = Cursors.Hand;
-            btnDashboard.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.Image = Properties.Resources.dashboardBlack;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
@@ -127,14 +137,14 @@
             btnPengelolaanProduk.BackColor = Color.Transparent;
             btnPengelolaanProduk.BackgroundImageLayout = ImageLayout.Zoom;
             btnPengelolaanProduk.Cursor = Cursors.Hand;
-            btnPengelolaanProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPengelolaanProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPengelolaanProduk.ForeColor = Color.Black;
             btnPengelolaanProduk.Image = Properties.Resources.kelolaProdukBlack;
             btnPengelolaanProduk.ImageAlign = ContentAlignment.MiddleLeft;
             btnPengelolaanProduk.Location = new Point(3, 247);
             btnPengelolaanProduk.Name = "btnPengelolaanProduk";
             btnPengelolaanProduk.Padding = new Padding(20, 0, 0, 0);
-            btnPengelolaanProduk.Size = new Size(258, 58);
+            btnPengelolaanProduk.Size = new Size(276, 58);
             btnPengelolaanProduk.TabIndex = 7;
             btnPengelolaanProduk.Text = "             Pengelolaan Produk";
             btnPengelolaanProduk.TextAlign = ContentAlignment.MiddleLeft;
@@ -162,7 +172,7 @@
             btnLogout.BackColor = Color.Red;
             btnLogout.BackgroundImageLayout = ImageLayout.Zoom;
             btnLogout.Cursor = Cursors.Hand;
-            btnLogout.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
             btnLogout.Image = Properties.Resources.logoutBtn;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
@@ -182,7 +192,7 @@
             btnTransaksi.BackColor = Color.SaddleBrown;
             btnTransaksi.BackgroundImageLayout = ImageLayout.Zoom;
             btnTransaksi.Cursor = Cursors.Hand;
-            btnTransaksi.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransaksi.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTransaksi.ForeColor = Color.White;
             btnTransaksi.Image = Properties.Resources.transaksiWhite;
             btnTransaksi.ImageAlign = ContentAlignment.MiddleLeft;
@@ -201,7 +211,7 @@
             btnPengelolaanStok.BackColor = Color.Transparent;
             btnPengelolaanStok.BackgroundImageLayout = ImageLayout.Zoom;
             btnPengelolaanStok.Cursor = Cursors.Hand;
-            btnPengelolaanStok.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPengelolaanStok.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPengelolaanStok.ForeColor = Color.Black;
             btnPengelolaanStok.Image = Properties.Resources.kelolaStokBlack;
             btnPengelolaanStok.ImageAlign = ContentAlignment.MiddleLeft;
@@ -219,10 +229,10 @@
             // 
             labelTotalProduk.AutoSize = true;
             labelTotalProduk.BackColor = Color.Transparent;
-            labelTotalProduk.Font = new Font("SF Pro Display", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTotalProduk.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelTotalProduk.Location = new Point(278, 68);
             labelTotalProduk.Name = "labelTotalProduk";
-            labelTotalProduk.Size = new Size(29, 29);
+            labelTotalProduk.Size = new Size(27, 29);
             labelTotalProduk.TabIndex = 4;
             labelTotalProduk.Text = "0";
             // 
@@ -250,10 +260,10 @@
             // 
             lblNamaProduk.AutoSize = true;
             lblNamaProduk.BackColor = Color.Transparent;
-            lblNamaProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamaProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNamaProduk.Location = new Point(32, 169);
             lblNamaProduk.Name = "lblNamaProduk";
-            lblNamaProduk.Size = new Size(125, 23);
+            lblNamaProduk.Size = new Size(134, 24);
             lblNamaProduk.TabIndex = 1;
             lblNamaProduk.Text = "Kopi Robusta";
             // 
@@ -272,10 +282,10 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(36, 169);
             label8.Name = "label8";
-            label8.Size = new Size(119, 23);
+            label8.Size = new Size(129, 24);
             label8.TabIndex = 1;
             label8.Text = "Kopi Arabica";
             // 
@@ -306,11 +316,11 @@
             // 
             labelHrgProduk.AutoSize = true;
             labelHrgProduk.BackColor = Color.Transparent;
-            labelHrgProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelHrgProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelHrgProduk.ForeColor = Color.DarkOrange;
             labelHrgProduk.Location = new Point(45, 192);
             labelHrgProduk.Name = "labelHrgProduk";
-            labelHrgProduk.Size = new Size(105, 23);
+            labelHrgProduk.Size = new Size(109, 24);
             labelHrgProduk.TabIndex = 23;
             labelHrgProduk.Text = "Rp. 75.000";
             labelHrgProduk.TextAlign = ContentAlignment.MiddleCenter;
@@ -353,11 +363,11 @@
             // 
             lblHrgProduk.AutoSize = true;
             lblHrgProduk.BackColor = Color.Transparent;
-            lblHrgProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHrgProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHrgProduk.ForeColor = Color.DarkOrange;
             lblHrgProduk.Location = new Point(41, 192);
             lblHrgProduk.Name = "lblHrgProduk";
-            lblHrgProduk.Size = new Size(106, 23);
+            lblHrgProduk.Size = new Size(109, 24);
             lblHrgProduk.TabIndex = 24;
             lblHrgProduk.Text = "Rp. 55.000";
             lblHrgProduk.TextAlign = ContentAlignment.MiddleCenter;
@@ -368,7 +378,7 @@
             btnRiwayatTrs.BackColor = Color.White;
             btnRiwayatTrs.BackgroundImageLayout = ImageLayout.Zoom;
             btnRiwayatTrs.Cursor = Cursors.Hand;
-            btnRiwayatTrs.Font = new Font("SF Pro Display", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRiwayatTrs.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRiwayatTrs.ForeColor = Color.Black;
             btnRiwayatTrs.Image = Properties.Resources.historyIconBlck;
             btnRiwayatTrs.ImageAlign = ContentAlignment.MiddleLeft;
@@ -380,6 +390,7 @@
             btnRiwayatTrs.Text = "         Riwayat Transaksi";
             btnRiwayatTrs.TextAlign = ContentAlignment.MiddleLeft;
             btnRiwayatTrs.UseVisualStyleBackColor = false;
+            btnRiwayatTrs.Click += btnRiwayatTrs_Click;
             // 
             // panel1
             // 
@@ -399,10 +410,10 @@
             // 
             totalTransaksi.AutoSize = true;
             totalTransaksi.BackColor = Color.Transparent;
-            totalTransaksi.Font = new Font("SF Pro Display", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            totalTransaksi.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             totalTransaksi.Location = new Point(245, 674);
             totalTransaksi.Name = "totalTransaksi";
-            totalTransaksi.Size = new Size(69, 29);
+            totalTransaksi.Size = new Size(74, 29);
             totalTransaksi.TabIndex = 22;
             totalTransaksi.Text = "Rp. 0";
             // 
@@ -410,17 +421,17 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("SF Pro Display", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(28, 674);
             label3.Name = "label3";
-            label3.Size = new Size(61, 29);
+            label3.Size = new Size(68, 29);
             label3.TabIndex = 21;
             label3.Text = "Total";
             // 
             // btnLanjutTransaksi
             // 
             btnLanjutTransaksi.BackColor = Color.SaddleBrown;
-            btnLanjutTransaksi.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLanjutTransaksi.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLanjutTransaksi.ForeColor = Color.White;
             btnLanjutTransaksi.Location = new Point(28, 720);
             btnLanjutTransaksi.Name = "btnLanjutTransaksi";
@@ -433,10 +444,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("SF Pro Display", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(68, 35);
             label2.Name = "label2";
-            label2.Size = new Size(292, 44);
+            label2.Size = new Size(308, 42);
             label2.TabIndex = 19;
             label2.Text = "Daftar Transaksi\r\n";
             // 
@@ -458,11 +469,11 @@
             // 
             HargaProduk.AutoSize = true;
             HargaProduk.BackColor = Color.Transparent;
-            HargaProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            HargaProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             HargaProduk.ForeColor = Color.DarkOrange;
             HargaProduk.Location = new Point(102, 51);
             HargaProduk.Name = "HargaProduk";
-            HargaProduk.Size = new Size(106, 23);
+            HargaProduk.Size = new Size(109, 24);
             HargaProduk.TabIndex = 26;
             HargaProduk.Text = "Rp. 55.000";
             HargaProduk.TextAlign = ContentAlignment.MiddleCenter;
@@ -471,10 +482,10 @@
             // 
             NamaProduk.AutoSize = true;
             NamaProduk.BackColor = Color.Transparent;
-            NamaProduk.Font = new Font("SF Pro Display", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NamaProduk.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             NamaProduk.Location = new Point(102, 13);
             NamaProduk.Name = "NamaProduk";
-            NamaProduk.Size = new Size(125, 23);
+            NamaProduk.Size = new Size(134, 24);
             NamaProduk.TabIndex = 25;
             NamaProduk.Text = "Kopi Robusta";
             // 
@@ -489,10 +500,65 @@
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
+            // npgsqlDataAdapter1
+            // 
+            npgsqlDataAdapter1.DeleteCommand = null;
+            npgsqlDataAdapter1.InsertCommand = null;
+            npgsqlDataAdapter1.SelectCommand = null;
+            npgsqlDataAdapter1.UpdateCommand = null;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnNo, ColumnTanggal, ColumnIDProduk, ColumnNamaProduk, ColumnJumlah, ColumnHarga, ColumnTotalHarga });
+            dataGridView1.GridColor = SystemColors.InactiveBorder;
+            dataGridView1.Location = new Point(299, 269);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(717, 478);
+            dataGridView1.TabIndex = 23;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // ColumnNo
+            // 
+            ColumnNo.HeaderText = "No";
+            ColumnNo.Name = "ColumnNo";
+            // 
+            // ColumnTanggal
+            // 
+            ColumnTanggal.HeaderText = "Tanggal";
+            ColumnTanggal.Name = "ColumnTanggal";
+            // 
+            // ColumnIDProduk
+            // 
+            ColumnIDProduk.HeaderText = "ID Produk";
+            ColumnIDProduk.Name = "ColumnIDProduk";
+            // 
+            // ColumnNamaProduk
+            // 
+            ColumnNamaProduk.HeaderText = "Nama Produk";
+            ColumnNamaProduk.Name = "ColumnNamaProduk";
+            // 
+            // ColumnJumlah
+            // 
+            ColumnJumlah.HeaderText = "Jumlah";
+            ColumnJumlah.Name = "ColumnJumlah";
+            // 
+            // ColumnHarga
+            // 
+            ColumnHarga.HeaderText = "Harga";
+            ColumnHarga.Name = "ColumnHarga";
+            // 
+            // ColumnTotalHarga
+            // 
+            ColumnTotalHarga.HeaderText = "Total Harga";
+            ColumnTotalHarga.Name = "ColumnTotalHarga";
+            // 
             // UCTransaksi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(btnRiwayatTrs);
             Controls.Add(topPanel);
@@ -516,6 +582,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -554,5 +621,14 @@
         private Label HargaProduk;
         private Label NamaProduk;
         private PictureBox pictureBox3;
+        private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ColumnNo;
+        private DataGridViewTextBoxColumn ColumnTanggal;
+        private DataGridViewTextBoxColumn ColumnIDProduk;
+        private DataGridViewTextBoxColumn ColumnNamaProduk;
+        private DataGridViewTextBoxColumn ColumnJumlah;
+        private DataGridViewTextBoxColumn ColumnHarga;
+        private DataGridViewTextBoxColumn ColumnTotalHarga;
     }
 }
